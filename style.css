@@ -1,20 +1,44 @@
 
 .dark{
-    background-color: aqua;
+    background-color: rgb(219, 219, 219);
     height:100vh;
 }
 .d{
-    background-color: black;
+    background-color: rgb(115, 115, 115);
     height:100vh;
 }
 .da{
-    background-color: grey;
+    background-color: rgb(47, 47, 47);
     height:100vh;
 }
 .hide{
     display: none;
 }
+header{
+    padding: 1rem;
+}
+
 #navbar{
+    padding: 1rem;
     background-color:white;
     position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100%;
+    border-radius: 40px;
+    box-sizing:border-box;
+    gap: 1rem;
+}
+#second{
+    background-color: black;
+    color: white;
+    z-index: 40;
+    position: fixed;
+    padding: 1rem;
+    border-radius: 50%;
+}
+#second .hide{
+    display: none;
 }
