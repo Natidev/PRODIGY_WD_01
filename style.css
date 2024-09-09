@@ -2,23 +2,39 @@
 .dark{
     background-color: rgb(219, 219, 219);
     height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
 }
 .d{
-    background-color: rgb(115, 115, 115);
-    height:100vh;
-}
-.da{
     background-color: rgb(47, 47, 47);
     height:100vh;
 }
-.hide{
-    display: none;
+.da{
+    background-color: rgb(115, 115, 115);
+    height:100vh;
+    padding: 2rem;
 }
+
 header{
     padding: 1rem;
+
+}
+main{
+    margin-top: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: #000;
 }
 
 #navbar{
+    display: flex;
+    justify-content: end;
     padding: 1rem;
     background-color:white;
     position: fixed;
@@ -39,6 +55,49 @@ header{
     padding: 1rem;
     border-radius: 50%;
 }
-#second .hide{
+.hide{
     display: none;
+}
+button.start{
+    border-radius: 4rem;
+    font-size:larger;
+    padding: 1rem;
+}
+#signupbtn:hover,button.start:hover{
+    color: white;
+    background: #000;
+    border-color: aliceblue;
+    transform: scale(1.1);
+}
+#sp{
+    background: rgb(244, 244, 244);
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+}
+form{
+
+    display: grid;
+    grid-column: 1;
+    gap: 1rem;
+    
+}
+input{
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    max-width: 12rem;
+
+}
+button#signupbtn,#loginbtn{
+    padding: 0.5rem;
+    width: min-content;
+    border-radius: 0.45rem;
+}
+.links{
+    color: rgb(0, 110, 255);
+}
+.links:hover{
+    text-decoration: underline;
 }
