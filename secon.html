@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+            gap: 1em;
+        }
+        div{
+            background-color: rgb(41, 41, 41);
+            position: relative;
+            border-radius: 1rem;
+            width: 20rem;
+            height: 30rem;
+            color: white;
+            padding: 0.5rem;
+        }
+        @property --angle{
+            syntax: "<angle>";
+                initial-value: 0deg;
+                inherits: false;
+        }
+        /* div::before, div::after{
+            
+            padding: 0.75rem;
+            content: '';
+            position: absolute;
+            border-radius: 1rem;
+            background-image: conic-gradient(from var(--angle),rgb(0, 157, 255),red,yellow,rgb(0, 157, 255));
+            width: 20rem;
+            height: 30rem;
+            z-index: -1;
+            top:50%;
+            left:50%;
+            translate: -50% -50%;
+            animation: 3s spin linear infinite;
+        } */
+        div::after{
+            filter: blur(6px);
+        }
+        section{
+            background-color:white;
+            width: 14rem;
+            aspect-ratio: 16/1;
+            border-radius: 1rem;
+            position: relative;
+        }
+        section::after{
+            position: absolute;
+            content: '';
+            width: 50%;
+            height: 100%;
+            background: #0059ff;
+            border-radius: 1rem 0 0 1rem;
+        }
+
+        @keyframes spin {
+            from{
+                --angle:0deg;
+            }
+            to{
+                --angle:360deg;
+            }
+            
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Transitions
+    </div>
+    <section>
+        </section>
+</body>
+</html>

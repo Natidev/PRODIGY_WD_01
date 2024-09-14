@@ -1,6 +1,7 @@
-let deltascroll=0
+var deltascroll=0
 const loginref=document.getElementById("2login")
 const signupref=document.getElementById("2signup")
+
 loginref.addEventListener('click',(e)=>{
     document.getElementById('login').classList.remove('hide')
     document.getElementById('signup').classList.add('hide')
@@ -9,16 +10,19 @@ loginref.addEventListener('click',(e)=>{
 signupref.addEventListener('click',(e)=>{
     document.getElementById('login').classList.add('hide')
     document.getElementById('signup').classList.remove('hide')
-
-})
+}
+)
+console.log(window.screen.width)
 window.addEventListener('scroll',(e)=>{
-    const navbar=document.getElementById("navbar")
+    const navbar=document.getElementById("navbar")    
     let diff=Math.abs(window.scrollY-deltascroll)
-
+    if(window.screenX<431)
+        return 
     if(diff>50){
         if((window.scrollY-deltascroll)>0)
-                navbar.classList.add("hide")
+            navbar.style.display="none"
         deltascroll=window.scrollY
     }else if((window.scrollY-deltascroll)<0)
-        navbar.classList.remove('hide')
+        navbar.style.display="flex"
+        
 })

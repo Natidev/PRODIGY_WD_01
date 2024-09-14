@@ -9,20 +9,32 @@
 
 <body id="bdy">
 <header>
-<button id="second" class="hide">
-        +
-    </button>
+
+    <input type="checkbox" id="ctrlnav" class="hide">
+    <label for="ctrlnav" id="overlay"></label>
+    <label for="ctrlnav" id="openmenu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
     <nav id="navbar">
-            <a href="#1">Home</a>
-            <a href="#3">Messages</a>
-            <a href="#2">Login</a>
+        <p></p><a class="nav-items" href="#1">Home</a>
+        <a class="nav-items" href="#3">Messages</a>
+        <a class="nav-items" href="#2">Login</a>
+    </nav>
+    <nav id="mobilenav">
+        <label for="ctrlnav" >
+            <svg id="closemenu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> 
+        </label>
+        
+        <a  href="#1" class="mobile">Home</a>
+        <a  href="#3" class="mobile">Messages</a>
+        <a  href="#2" class="mobile">Login</a>
     </nav>
 </header>
     
     <main>
         <section class="dark" id="1">
             Welcome to prodigy tech
-            <button class="start">
+            <button class="start" id="start">
                 Get Started 
             </button>
         </section>
@@ -73,8 +85,14 @@
 
 
         </section>
-        <section class="d" id="3"></section>
+        <section class="d" id="3">
+
+        </section>
     </main>
+    <footer>
+        This belongs to House of balloons
+    </footer>
+
 </body>
 <script src="script.js"></script>
 </html>
