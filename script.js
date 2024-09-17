@@ -16,13 +16,13 @@ console.log(window.screen.width)
 window.addEventListener('scroll',(e)=>{
     const navbar=document.getElementById("navbar")    
     let diff=Math.abs(window.scrollY-deltascroll)
-    if(window.screenX<431)
-        return 
-    if(diff>50){
+
+    if(diff>50 && !window.screenX>430){
         if((window.scrollY-deltascroll)>0)
             navbar.style.display="none"
         deltascroll=window.scrollY
-    }else if((window.scrollY-deltascroll)<0)
+    }else if((window.scrollY-deltascroll)<0 && !window.screenX>430)
         navbar.style.display="flex"
+    
         
 })
